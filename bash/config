@@ -1,3 +1,4 @@
 . ~/.dotfiles/bash/colors
 
+# Set the prompt to: "[<user>@<host> <pwd> ] "
 export PS1="$BRIGHT_BLACK[$GREEN\u$RESET@$GREEN\h $BLUE\w $BRIGHT_BLACK]$RESET "
