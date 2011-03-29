@@ -1,0 +1,9 @@
+startup_message off
+escape ^Jj
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %1` %H %{..Y} %m/%d %C%a "
+caption string "%{kw} %n %t"
+defscrollback 10000
+
+source .screenrc-${LOCATION}

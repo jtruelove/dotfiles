@@ -1,0 +1,3 @@
+. ~/.dotfiles/bash/colors
+
+export PS1="$BRIGHT_BLACK[$GREEN\u$RESET@$GREEN\h $BLUE\w $BRIGHT_BLACK]$RESET "

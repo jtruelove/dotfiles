@@ -1,0 +1,25 @@
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+
+[core]
+  editor = mate -w
+
+[push]
+  default = current
+
+[user]
+  name = Adam Spooner
+  email = adam@oakmade.com

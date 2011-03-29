@@ -1,0 +1,10 @@
+alias ll="ls -lF"
+alias lls="ls -alF"
+alias m=mate
+alias rm="rm -i"
+
+# mkdir, cd into it
+mkcd() {
+  mkdir -p "$*"
+  cd "$*"
+}

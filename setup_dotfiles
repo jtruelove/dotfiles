@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+DWD="$HOME/.dotfiles"
+
+BP="$HOME/.bash_profile"
+BRC="$HOME/.bashrc"
+GC="$HOME/.gitconfig"
+GRC="$HOME/.gvimrc"
+RVM="$HOME/.rvmrc"
+SCREEN="$HOME/.screenrc"
+VIM="$HOME/.vim"
+VRC="$HOME/.vimrc"
+
+function erase_dotfiles {
+  # echo "Erasing dotfiles..."
+  rm -f $BP
+  rm -f $BRC
+  rm -f $GC
+  rm -f $GRC
+  rm -f $RVM
+  rm -f $SCREEN
+  rm -f $VIM
+  rm -f $VRC
+}
+
+function create_symlinks {
+  # echo "Creating symlinks..."
+  ln -s $DWD/bash/profile $BP
+  ln -s $DWD/bash/profile $BRC
+  ln -s $DWD/git/config $GC
+  ln -s $DWD/vim/grc $GRC
+  ln -s $DWD/rvmrc $RVM
+  ln -s $DWD/screenrc $SCREEN
+  ln -s $DWD/vim $VIM
+  ln -s $DWD/vim/rc $VRC
+}
+
+# make sure the directory exists
+if cd $DWD; then
+
+  echo "Replace current dotfiles? [1 or 2]"
+  select RN in "Replace" "No"; do
+    case $RN in
+      Replace )
+        erase_dotfiles
+        create_symlinks
+        exit 0
+        ;;
+      
+      No )
+        create_symlinks
+        exit 0
+        ;;
+    esac
+  done
+
+fi

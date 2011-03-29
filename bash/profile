@@ -1,0 +1,4 @@
+. ~/.dotfiles/bash/config
+. ~/.dotfiles/bash/env
+. ~/.dotfiles/bash/aliases
+. ~/.dotfiles/bash/tools
