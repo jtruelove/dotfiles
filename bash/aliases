@@ -2,6 +2,7 @@ alias ll="ls -lF"
 alias lls="ls -alF"
 alias m=mate
 alias rm="rm -i"
+alias yuicompress="java -jar $HOME/bin/yuicompressor-2.4.2.jar"
 
 # mkdir, cd into it
 mkcd() {
