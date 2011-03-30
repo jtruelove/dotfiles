@@ -1,0 +1,3 @@
+[submodule "vim-coffee-script"]
+	path = vim-coffee-script
+	url = /Users/adam/.dotfiles/vim/bundle/vim-coffee-script
