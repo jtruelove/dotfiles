@@ -1,3 +1,13 @@
+
+" turn filetype off per the pathogen instructions at
+" http://www.vim.org/scripts/script.php?script_id=2332
+filetype off
+
+call pathogen#runtime_append_all_bundles()
+
+" turn filetype back on after calling pathogen
+filetype on
+
 set autoindent
 set number
 set ruler
