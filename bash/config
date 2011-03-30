@@ -1,4 +1,15 @@
 . ~/.dotfiles/bash/colors
 
+HOST=`hostname -s`
+
+# Change prompt color based on hostname
+if [ $HOST = 'Ateles' ]; then
+  COLOR=$GREEN
+elif [ $HOST = 'Cacajao' ]; then
+  COLOR=$RED
+else
+  COLOR=$WHITE
+fi
+
 # Set the prompt to: "[<user>@<host> <pwd> ] "
-export PS1="$BRIGHT_BLACK[$GREEN\u$RESET@$GREEN\h $BLUE\w $BRIGHT_BLACK]$RESET "
+export PS1="$BRIGHT_BLACK[$COLOR\u$RESET@$COLOR\h $BLUE\w $BRIGHT_BLACK]$RESET "
