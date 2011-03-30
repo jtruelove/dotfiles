@@ -7,11 +7,11 @@ export TERM="xterm-color"
 export NODE_PATH="/usr/local/lib/node"
 
 # Default paths
-export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:/usr/local/sbin"
-export PATH="$PATH:/usr/bin"
+# Ensure brew is happy by adding /usr/local/(s)bin
+# before /usr/bin
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# Brew paths
+# Additional brew paths
 export PATH="$PATH:/usr/local/Cellar/python/2.7.1/bin"
 
 # My path
