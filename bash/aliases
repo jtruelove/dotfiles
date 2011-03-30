@@ -1,4 +1,12 @@
+# wrap REPLs with rlwrap for nice cli editing
+alias chibi="rlwrap chibi-scheme"
 alias clj="rlwrap clj"
+alias racket="rlwrap racket"
+alias s48="rlwrap scheme48"
+
+# load gsi with The Little Schemer's base functions
+alias tls="gsi $HOME/Projects/scheme/TLS/base.scm -"
+
 alias ll="ls -lF"
 alias lls="ls -alF"
 alias m=mate
