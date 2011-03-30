@@ -1,3 +1,4 @@
+alias clj="rlwrap clj"
 alias ll="ls -lF"
 alias lls="ls -alF"
 alias m=mate
