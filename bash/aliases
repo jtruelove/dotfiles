@@ -7,10 +7,26 @@ alias s48="rlwrap scheme48"
 # load gsi with The Little Schemer's base functions
 alias tls="gsi $HOME/Projects/scheme/TLS/base.scm -"
 
+# laziness
 alias ll="ls -lF"
 alias lls="ls -alF"
-alias m=mate
+alias mv="mv -i"
 alias rm="rm -i"
+
+alias m=mate
+alias v=vim
+
+alias bi="brew install"
+alias bs="brew search"
+alias bu="brew update"
+alias bp="brew prune"
+alias br="brew rm"
+
+alias gp="git pull"
+alias go="git push"
+alias gc="git commit"
+alias gl="git log --pretty=oneline"
+
 alias yuicompress="java -jar $HOME/bin/yuicompressor-2.4.2.jar"
 
 # mkdir, cd into it
