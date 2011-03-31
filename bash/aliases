@@ -29,6 +29,7 @@ alias gp="git pull"
 alias go="git push"
 alias gc="git commit"
 alias gl="git log --pretty=oneline"
+alias gw="git whatchanged"
 
 alias yuicompress="java -jar $HOME/bin/yuicompressor-2.4.2.jar"
 
