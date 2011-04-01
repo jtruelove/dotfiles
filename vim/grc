@@ -3,5 +3,3 @@ source ~/.dotfiles/vim/rc
 set guifont=Menlo-Regular:h14
 set guioptions-=T
 set guioptions-=r
-
-colorscheme ir_black

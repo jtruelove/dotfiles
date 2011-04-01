@@ -8,7 +8,14 @@ call pathogen#runtime_append_all_bundles()
 " turn filetype back on after calling pathogen
 filetype on
 
+" set the leader key to the comma
+let mapleader=','
+
+" toggle invisibles with ,l
+nmap <leader>l :set list!<cr>
+
 set autoindent
+set list
 set number
 set ruler
 set shiftwidth=2
@@ -17,4 +24,9 @@ set smarttab
 set tabstop=2
 set expandtab
 
+" mimic TextMate's invisible characters
+set listchars=tab:▸\ ,eol:¬
+
 syntax enable
+
+colorscheme ir_black
