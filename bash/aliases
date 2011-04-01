@@ -7,6 +7,8 @@ alias s48="rlwrap scheme48"
 # load gsi with The Little Schemer's base functions
 alias tls="gsi $HOME/Projects/scheme/TLS/base.scm -"
 
+alias Words="cat /usr/share/dict/web2 /usr/share/dict/web2a"
+
 # laziness
 alias ll="ls -lF"
 alias lls="ls -alF"
