@@ -2,6 +2,7 @@
 
 DIR=`pwd`
 
+ACK="$HOME/.ackrc"
 BP="$HOME/.bash_profile"
 BRC="$HOME/.bashrc"
 GC="$HOME/.gitconfig"
@@ -13,6 +14,7 @@ VRC="$HOME/.vimrc"
 
 function erase_dotfiles {
   # echo "Erasing dotfiles..."
+  rm -f $ACK
   rm -f $BP
   rm -f $BRC
   rm -f $GC
@@ -25,6 +27,7 @@ function erase_dotfiles {
 
 function create_symlinks {
   # echo "Creating symlinks..."
+  ln -s $DIR/ackrc $ACK
   ln -s $DIR/bash/profile $BP
   ln -s $DIR/bash/profile $BRC
   ln -s $DIR/git/config $GC
