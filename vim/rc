@@ -1,12 +1,22 @@
 
-" turn filetype off per the pathogen instructions at
-" http://www.vim.org/scripts/script.php?script_id=2332
-filetype off
+" How I prefer my tabs/spaces
+set ts=2 sts=2 sw=2 expandtab
 
-call pathogen#runtime_append_all_bundles()
-
-" turn filetype back on after calling pathogen
-filetype on
+if has("autocmd")
+  
+  " turn filetype off per the pathogen instructions at
+  " http://www.vim.org/scripts/script.php?script_id=2332
+  filetype off
+  
+  call pathogen#runtime_append_all_bundles()
+  
+  " turn filetype back on after calling pathogen
+  filetype on
+  
+  " Syntax of these languages is fussy over tabs Vs spaces
+  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+  
+endif
 
 " set the leader key to the comma
 let mapleader=','
@@ -18,12 +28,8 @@ set autoindent
 set list
 set number
 set ruler
-set shiftwidth=2
 set smartindent
 set smarttab
-set softtabstop=2
-set tabstop=2
-set expandtab
 
 " mimic TextMate's invisible characters
 set listchars=tab:▸\ ,eol:¬
