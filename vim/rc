@@ -22,7 +22,7 @@ endif
 let mapleader=','
 
 " source custom functions
-so "~/.dotfiles/vim/functions"
+so ~/.dotfiles/vim/functions
 
 " map ,w to StripTrailingWhitespaces()
 nnoremap <silent> <leader>w :call StripTrailingWhitespaces()<cr>
