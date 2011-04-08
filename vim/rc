@@ -44,6 +44,13 @@ set smarttab
 " mimic TextMate's invisible characters
 set listchars=tab:▸\ ,eol:¬
 
+" show current file [filetype] on the left and 
+" [cursor position line,colum] [number of lines] on the right
+set statusline=%F%m%r%h%w\ [%Y]\ %=[%l,%v]\ [%L\ lines]
+
+" show the status line
+set laststatus=2
+
 syntax enable
 
 colorscheme ir_black
