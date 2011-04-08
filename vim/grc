@@ -1,4 +1,4 @@
-source ~/.dotfiles/vim/rc
+so ~/.dotfiles/vim/rc
 
 set guifont=Menlo-Regular:h16
 set guioptions-=T

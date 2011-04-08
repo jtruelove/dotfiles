@@ -21,6 +21,12 @@ endif
 " set the leader key to the comma
 let mapleader=','
 
+" source custom functions
+so "~/.dotfiles/vim/functions"
+
+" map ,w to StripTrailingWhitespaces()
+nnoremap <silent> <leader>w :call StripTrailingWhitespaces()<cr>
+
 " toggle invisibles with ,l
 nmap <leader>l :set list!<cr>
 
