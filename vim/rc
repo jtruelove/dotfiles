@@ -24,7 +24,11 @@ let mapleader=','
 " toggle invisibles with ,l
 nmap <leader>l :set list!<cr>
 
+" toggle cursorline highlighting
+nmap <leader>c :set cursorline!<cr>
+
 set autoindent
+set cursorline
 set list
 set number
 set ruler
