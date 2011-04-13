@@ -12,6 +12,7 @@ if has("autocmd")
   
   " turn filetype back on after calling pathogen
   filetype on
+  filetype plugin on
   
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
