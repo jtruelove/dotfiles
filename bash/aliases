@@ -5,7 +5,10 @@ alias racket="rlwrap racket"
 alias s48="rlwrap scheme48"
 
 # load gsi with The Little Schemer's base functions
-alias tls="gsi $HOME/Projects/scheme/TLS/base.scm -"
+# alias tls="gsi $HOME/Projects/scheme/TLS/base.scm -"
+
+# load racket with The Little Schemer's base functions
+alias tls="racket -f $HOME/Projects/scheme/TLS/base.scm -i"
 
 # handy for grepping words from the dictionary
 alias words="cat /usr/share/dict/web2 /usr/share/dict/web2a"
@@ -13,8 +16,11 @@ alias words="cat /usr/share/dict/web2 /usr/share/dict/web2a"
 # laziness
 alias ll="ls -lF"
 alias lls="ls -alF"
+alias lr="lls -R"
 alias mv="mv -i"
 alias rm="rm -i"
+alias ..="cd .."
+alias h=history
 
 alias m=mate
 alias v=vim
@@ -33,6 +39,12 @@ alias go="git push"
 alias gc="git commit"
 alias gl="git log --pretty=oneline"
 alias gw="git whatchanged"
+
+# edit and reload bash configuration
+alias ea="v $HOME/.dotfiles/bash/aliases"
+alias ee="v $HOME/.dotfiles/bash/env"
+alias et="v $HOME/.dotfiles/bash/tools"
+alias reload=". $HOME/.bash_profile"
 
 alias yuicompress="java -jar $HOME/bin/yuicompressor-2.4.2.jar"
 
