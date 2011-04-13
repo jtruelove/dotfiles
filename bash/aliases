@@ -19,6 +19,7 @@ alias lls="ls -alF"
 alias lr="lls -R"
 alias mv="mv -i"
 alias rm="rm -i"
+alias cdd="cd -"
 alias ..="cd .."
 alias h=history
 
