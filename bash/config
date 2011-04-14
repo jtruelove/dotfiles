@@ -6,10 +6,10 @@ HOST=`hostname -s`
 if [ $HOST = 'Ateles' ]; then
   COLOR=$GREEN
 elif [ $HOST = 'Cacajao' ]; then
-  COLOR=$RED
+  COLOR=$VIOLET
 else
   COLOR=$WHITE
 fi
 
 # Set the prompt to: "[<user>@<host> <pwd> ] "
-export PS1="$BRIGHT_BLACK[$COLOR\u$RESET@$COLOR\h $BLUE\w $BRIGHT_BLACK]$RESET "
+export PS1="$BRIGHT_BLACK[$COLOR\u$BRIGHT_BLACK@$COLOR\h $BLUE\w $BRIGHT_BLACK]$RESET "
