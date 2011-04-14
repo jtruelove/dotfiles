@@ -28,8 +28,8 @@ so ~/.dotfiles/vim/functions
 " map ,w to StripTrailingWhitespaces()
 nnoremap <silent> <leader>w :call StripTrailingWhitespaces()<cr>
 
-" toggle invisibles with ,l
-nmap <leader>l :set list!<cr>
+" toggle invisibles with ,i
+nmap <leader>i :set list!<cr>
 
 " toggle cursorline highlighting
 nmap <leader>c :set cursorline!<cr>
