@@ -27,6 +27,7 @@ alias m=mate
 alias v=vim
 
 alias bi="brew install"
+alias bif="bi --force"
 alias bs="brew search"
 alias bu="brew update"
 alias bp="brew prune"
