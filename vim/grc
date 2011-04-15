@@ -1,5 +1,6 @@
 so ~/.dotfiles/vim/rc
 
+set spell
 set cursorline
 set guifont=Menlo-Regular:h16
 set guioptions-=T

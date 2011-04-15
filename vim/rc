@@ -1,4 +1,3 @@
-
 " How I prefer my tabs/spaces
 set ts=2 sts=2 sw=2 expandtab
 
@@ -34,19 +33,32 @@ nmap <leader>i :set list!<cr>
 " toggle cursorline highlighting
 nmap <leader>c :set cursorline!<cr>
 
+" toggle spellcheck with ,s
+nmap <leader>s :set spell!<cr>
+
+" toggle previous buffer with ,,
+nmap <leader><leader> <c-^>
+
 set autoindent
+set hidden
 set list
 set number
 set ruler
 set smartindent
 set smarttab
+set showcmd
+set wildmenu
+set ignorecase
+set smartcase
+set scrolloff=5
+set backspace=indent,eol,start " backspace over everything
 
 " mimic TextMate's invisible characters
 set listchars=tab:▸\ ,eol:¬
 
-" show current file [filetype] on the left and 
+" show current file (filetype) on the left and 
 " [cursor position line,colum] [number of lines] on the right
-set statusline=%F%m%r%h%w\ [%Y]\ %=[%l,%v]\ [%L\ lines]
+set statusline=%F%m%r%h%w\ (%{&ft})\ %=[%l,%v]\ [%L\ lines]
 
 " show the status line
 set laststatus=2
