@@ -48,7 +48,7 @@ alias ee="v $HOME/.dotfiles/bash/env"
 alias et="v $HOME/.dotfiles/bash/tools"
 alias reload=". $HOME/.bash_profile"
 
-alias yuicompress="java -jar $HOME/bin/yuicompressor-2.4.2.jar"
+alias yuicompress="java -jar $HOME/bin/yuicompressor-2.4.6.jar"
 
 # always color rspec
 alias rspec="rspec -c"
