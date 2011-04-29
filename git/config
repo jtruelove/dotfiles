@@ -3,6 +3,7 @@
   ci = commit
   co = checkout
   br = branch
+  aa = "add --all"
 
 [branch "master"]
   remote = origin
