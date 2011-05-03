@@ -32,6 +32,8 @@ alias bs="brew search"
 alias bu="brew update"
 alias bp="brew prune"
 alias br="brew rm"
+alias bls="brew ls"
+alias bll="brew ll"
 
 alias ga="git add"
 alias gd="git diff"
