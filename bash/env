@@ -4,6 +4,7 @@ export CLICOLOR=YES
 # export GREP_OPTIONS="--color"
 export TERM="xterm-color"
 
+export PGDATA="/usr/local/var/postgres"
 export NODE_PATH="/usr/local/lib/node"
 
 # Default paths

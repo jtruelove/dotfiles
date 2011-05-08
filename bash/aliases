@@ -45,6 +45,10 @@ alias gc="git commit"
 alias gl="git log --pretty=oneline"
 alias gw="git whatchanged"
 
+# postgres
+alias pg_start="pg_ctl -l /usr/local/var/postgres/server.log start"
+alias pg_stop="pg_ctl stop -s -m fast"
+
 # edit and reload bash configuration
 alias ea="v $HOME/.dotfiles/bash/aliases"
 alias ee="v $HOME/.dotfiles/bash/env"
@@ -61,3 +65,4 @@ mkcd() {
   mkdir -p "$*"
   cd "$*"
 }
+
