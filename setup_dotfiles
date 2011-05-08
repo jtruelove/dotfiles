@@ -6,6 +6,7 @@ ACK="$HOME/.ackrc"
 BP="$HOME/.bash_profile"
 BRC="$HOME/.bashrc"
 GC="$HOME/.gitconfig"
+GI="$HOME/.gitignore"
 GRC="$HOME/.gvimrc"
 RVM="$HOME/.rvmrc"
 SCREEN="$HOME/.screenrc"
@@ -18,6 +19,7 @@ function erase_dotfiles {
   rm -f $BP
   rm -f $BRC
   rm -f $GC
+  rm -f $GI
   rm -f $GRC
   rm -f $RVM
   rm -f $SCREEN
@@ -31,6 +33,7 @@ function create_symlinks {
   ln -s $DIR/bash/profile $BP
   ln -s $DIR/bash/profile $BRC
   ln -s $DIR/git/config $GC
+  ln -s $DIR/git/ignore $GI
   ln -s $DIR/vim/grc $GRC
   ln -s $DIR/rvmrc $RVM
   ln -s $DIR/screenrc $SCREEN
