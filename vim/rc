@@ -43,6 +43,11 @@ nmap <leader>s :set spell!<cr>
 " toggle previous buffer with ,,
 nmap <leader><leader> <c-^>
 
+" open files in the same directory as the current file
+cnoremap %% <c-r>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
 " a visual reminder of an 80-character line
 if exists('+colorcolumn')
   set colorcolumn=81
