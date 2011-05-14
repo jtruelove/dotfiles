@@ -46,6 +46,8 @@ alias gc="git commit"
 alias gl="git log --pretty=oneline"
 alias gw="git whatchanged"
 
+alias jas="jasmine-node --color"
+
 # postgres
 alias pg_start="pg_ctl -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl stop -s -m fast"
