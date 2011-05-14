@@ -57,6 +57,7 @@ endif
 
 set autoindent
 set hidden
+set hlsearch
 set list
 set number
 set ruler
