@@ -56,12 +56,12 @@ else
 endif
 
 set autoindent
+set smartindent
 set hidden
 set hlsearch
 set list
 set number
 set ruler
-set smartindent
 set smarttab
 set showcmd
 set wildmenu
