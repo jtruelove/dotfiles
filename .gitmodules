@@ -22,3 +22,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "vim/bundle/scala-vim-support"]
+	path = vim/bundle/scala-vim-support
+	url = https://github.com/rosstimson/scala-vim-support.git
