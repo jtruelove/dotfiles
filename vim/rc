@@ -21,6 +21,9 @@ if has('autocmd')
   au FileType make,snippet setlocal ts=8 sts=8 sw=8 noexpandtab
   au FileType python setlocal ts=4 sts=4 sw=4
   
+  " compile coffeescripts on save
+  au BufWritePost,FileWritePost *.coffee :silent !coffee -c %
+  
 endif
 
 " set the leader key to the comma
