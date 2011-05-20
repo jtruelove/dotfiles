@@ -15,9 +15,10 @@ if has('autocmd')
   
   " set filetypes for a given extension
   au BufRead,BufNewFile *.R set ft=R
+  au BufRead,BufNewFile *.snippets set ft=snippet
   
   " local settings for specific filetypes
-  au FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+  au FileType make,snippet setlocal ts=8 sts=8 sw=8 noexpandtab
   au FileType python setlocal ts=4 sts=4 sw=4
   
 endif
@@ -43,6 +44,9 @@ nmap <leader>s :set spell!<cr>
 " toggle previous buffer with ,,
 nmap <leader><leader> <c-^>
 
+" clear search highlighting
+nmap <ret> :nohlsearch<cr>
+
 " open files in the same directory as the current file
 cnoremap %% <c-r>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
@@ -54,6 +58,9 @@ if exists('+colorcolumn')
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
+
+" don't autofold, but still allow manual folding
+set foldlevel=100
 
 set autoindent
 set smartindent
