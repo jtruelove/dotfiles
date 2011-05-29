@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR=`pwd`
+DIR="$HOME/.dotfiles"
 
 ACK="$HOME/.ackrc"
 BP="$HOME/.bash_profile"
@@ -8,6 +8,8 @@ BRC="$HOME/.bashrc"
 GC="$HOME/.gitconfig"
 GI="$HOME/.gitignore"
 GRC="$HOME/.gvimrc"
+IRC="$HOME/.irbrc"
+RRC="$HOME/.railsrc"
 RVM="$HOME/.rvmrc"
 SCREEN="$HOME/.screenrc"
 VIM="$HOME/.vim"
@@ -21,6 +23,8 @@ function erase_dotfiles {
   rm -f $GC
   rm -f $GI
   rm -f $GRC
+  rm -f $IRC
+  rm -f $RRC
   rm -f $RVM
   rm -f $SCREEN
   rm -f $VIM
@@ -35,6 +39,8 @@ function create_symlinks {
   ln -s $DIR/git/config $GC
   ln -s $DIR/git/ignore $GI
   ln -s $DIR/vim/grc $GRC
+  ln -s $DIR/irbrc $IRC
+  ln -s $DIR/railsrc $RRC
   ln -s $DIR/rvmrc $RVM
   ln -s $DIR/screenrc $SCREEN
   ln -s $DIR/vim $VIM

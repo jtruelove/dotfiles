@@ -51,6 +51,7 @@ alias gcl="git clone"
 alias gc="git checkout"
 
 alias jas="jasmine-node --color"
+alias mtr="sudo mtr"
 
 # postgres
 alias pg_start="pg_ctl -l /usr/local/var/postgres/server.log start"
