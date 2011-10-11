@@ -61,6 +61,10 @@ alias mtr="sudo mtr"
 alias pg_start="pg_ctl -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl stop -s -m fast"
 
+# for Lion, in case I forget it
+alias show_library="chflags nohidden ~/Library/"
+alias hide_library="chflags hidden ~/Library/"
+
 # edit and reload bash configuration
 alias ea="v $HOME/.dotfiles/bash/aliases"
 alias ee="v $HOME/.dotfiles/bash/env"
