@@ -7,6 +7,8 @@ if [ $HOST = 'Ateles' ]; then
   COLOR=$GREEN
 elif [ $HOST = 'Cacajao' ]; then
   COLOR=$VIOLET
+elif [ $HOST = 'adamjspooner' ]; then
+  COLOR=$RED
 else
   COLOR=$WHITE
 fi

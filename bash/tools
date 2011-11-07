@@ -4,7 +4,9 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # django bash completion
+if [ -f $HOME/src/django-trunk/extras/django_bash_completion ]; then
 . "$HOME/src/django-trunk/extras/django_bash_completion"
+fi
 
 # source RVM, should always be last
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
