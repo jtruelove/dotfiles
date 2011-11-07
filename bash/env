@@ -5,6 +5,7 @@ export CLICOLOR=YES
 export TERM="xterm-color"
 
 export PGDATA="/usr/local/var/postgres"
+export PYTHON="/usr/local/bin/python"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # Default paths
