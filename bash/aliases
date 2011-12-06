@@ -73,7 +73,7 @@ alias ee="v $HOME/.dotfiles/bash/env"
 alias et="v $HOME/.dotfiles/bash/tools"
 alias reload=". $HOME/.bash_profile"
 
-alias yuicompress="java -jar $HOME/bin/yuicompressor-2.4.7pre.jar"
+alias yuicompress="java -jar $HOME/bin/yuicompressor-2.4.8pre.jar"
 alias dnstest="java -jar $HOME/bin/browsermob-dns-perf.jar"
 
 # always color rspec
