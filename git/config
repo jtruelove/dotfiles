@@ -1,9 +1,20 @@
 [alias]
-  st = status
-  ci = commit
-  co = checkout
-  br = branch
+  a  = add
   aa = "add --all"
+  b  = branch
+  d  = diff
+  s  = "status --ignore-submodules"
+  p  = pull
+  o  = push
+  m  = "commit -m"
+  ma = "commit -am"
+  l  = "log --pretty=oneline"
+  t  = "log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'" # t is for tracks
+  w  = whatchanged
+  cl = clone
+  c  = checkout
+  ss = "stash save"
+  sa = "stash apply"
 
 [branch "master"]
   remote = origin
@@ -17,10 +28,17 @@
 
 [core]
   editor = mate -w
+	excludesfile = /Users/adam/.gitignore_global
 
 [push]
   default = current
 
 [user]
-  name = Adam Spooner
-  email = adam@oakmade.com
+	name = Adam Spooner
+	email = adam@authenticjobs.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

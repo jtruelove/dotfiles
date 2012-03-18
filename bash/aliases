@@ -15,6 +15,7 @@ alias words="cat /usr/share/dict/web2 /usr/share/dict/web2a"
 
 # laziness
 alias a="alias"
+alias l="l -F"
 alias ll="ls -lF"
 alias lls="ls -alF"
 alias lr="lls -R"
@@ -25,8 +26,11 @@ alias cdd="cd -"
 alias ..="cd .."
 alias h=history
 
-alias m=mate
+alias g=git
+alias m="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
+alias m2=mate
 alias v=vim
+alias t=todo.sh
 
 alias bi="brew install"
 alias bif="bi --force"
@@ -50,6 +54,7 @@ alias go="git push"
 alias gm="git commit -m"
 alias gma="git commit -am"
 alias gl="git log --pretty=oneline"
+alias gt="git t"
 alias gw="git whatchanged"
 alias gcl="git clone"
 alias gc="git checkout"
@@ -62,6 +67,11 @@ alias mtr="sudo mtr"
 # postgres
 alias pg_start="pg_ctl -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
+# mysql
+alias start_mysql="launchctl load -w $HOME/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias stop_mysql="launchctl unload -w $HOME/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias restart_mysql="stop_mysql && start_mysql"
 
 # for Lion, in case I forget it
 alias show_library="chflags nohidden ~/Library/"
