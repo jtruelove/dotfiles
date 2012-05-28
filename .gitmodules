@@ -31,3 +31,9 @@
 [submodule "bash/external/rails_completion"]
 	path = bash/external/rails_completion
 	url = https://github.com/jweslley/rails_completion.git
+[submodule ".dotfiles/vim/bundle/vim-clojure"]
+	path = .dotfiles/vim/bundle/vim-clojure
+	url = https://github.com/vim-scripts/VimClojure.git
+[submodule "vim/bundle/vim-clojure"]
+	path = vim/bundle/vim-clojure
+	url = https://github.com/vim-scripts/VimClojure.git
