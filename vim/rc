@@ -1,137 +1,96 @@
-" System vimrc file for Mac OS X
-" Author:  Benji Fisher <benji@member.AMS.org>
-" Last modified:  8 May 2006
+" How I prefer my tabs/spaces
+set ts=2 sts=4 sw=4 expandtab
 
-" TODO:  Is there a better way to tell that Vim.app was started from Finder.app?
-" Note:  Do not move this to the gvimrc file, else this value of $PATH will
-" not be available to plugin scripts.
-if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
-  " Get the value of $PATH from a login shell.
-  " If your shell is not on this list, it may be just because we have not
-  " tested it.  Try adding it to the list and see if it works.  If so,
-  " please post a note to the vim-mac list!
-  if $SHELL =~ '/\(sh\|csh\|bash\|tcsh\|zsh\)$'
-    let s:path = system("echo echo VIMPATH'${PATH}' | $SHELL -l")
-    let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
-  endif
+if has('autocmd')
+  
+  " turn filetype off per the pathogen instructions at
+  " http://www.vim.org/scripts/script.php?script_id=2332
+  filetype off
+  
+  call pathogen#runtime_append_all_bundles()
+  
+  " turn filetype back on after calling pathogen
+  filetype on
+  filetype plugin on
+  
+  " set filetypes for a given extension
+  au BufRead,BufNewFile *.R set ft=R
+  au BufRead,BufNewFile *.snippets set ft=snippet
+  
+  " local settings for specific filetypes
+  au FileType make,snippet setlocal ts=8 sts=8 sw=8 noexpandtab
+  au FileType python setlocal ts=4 sts=4 sw=4
+  
+  " compile coffeescripts on save
+  au BufWritePost,FileWritePost *.coffee :silent !coffee -c %
+  
 endif
 
-set title
-set nocompatible    " use vim defaults
-set ls=2            " allways show status line
-set tabstop=4       " numbers of spaces of tab character
-set shiftwidth=4    " numbers of spaces to (auto)indent
-set scrolloff=3     " keep 3 lines when scrolling
-set showcmd         " display incomplete commands
-set hlsearch        " highlight searches
-set incsearch       " do incremental searching
-set ruler           " show the cursor position all the time
-set visualbell t_vb=    " turn off error beep/flash
-set novisualbell    " turn off visual bell
-set nobackup        " do not keep a backup file
-set number          " show line numbers
-set ignorecase      " ignore case when searching
-"set noignorecase   " don't ignore case
-set title           " show title in console title bar
-set ttyfast         " smoother changes
-"set ttyscroll=0        " turn off scrolling, didn't work well with PuTTY
-set modeline        " last lines in document sets vim mode
-set modelines=3     " number lines checked for modelines
-set shortmess=atI   " Abbreviate messages
-set nostartofline   " don't jump to first character when paging
-set whichwrap=b,s,h,l,<,>,[,]   " move freely between files
-"set viminfo='20,<50,s10,h
+" set the leader key to the comma
+let mapleader=','
 
-"set autoindent     " always set autoindenting on
-"set smartindent        " smart indent
-"set cindent            " cindent
-set noautoindent
-set nosmartindent
-set nocindent  
+" source custom functions
+so ~/.dotfiles/vim/functions
 
-"set autowrite      " auto saves changes when quitting and swiching buffer
-"set expandtab      " tabs are converted to spaces, use only when required
-"set sm             " show matching braces, somewhat annoying...
-"set nowrap         " don't wrap lines
+" map ,w to StripTrailingWhitespaces()
+nnoremap <silent> <leader>w :call StripTrailingWhitespaces()<cr>
 
-syntax on           " syntax highlighing
+" toggle invisibles with ,i
+nmap <leader>i :set list!<cr>
 
-if has("gui_running")
-    " See ~/.gvimrc
-    set guifont=Monospace\ 10  " use this font
-    set lines=50       " height = 50 lines
-    set columns=100        " width = 100 columns
-    set background=light   " adapt colors for background
-    set selectmode=mouse,key,cmd
-    set keymodel=
+" toggle cursorline highlighting
+nmap <leader>c :set cursorline!<cr>
+
+" toggle spellcheck with ,s
+nmap <leader>s :set spell!<cr>
+
+" toggle previous buffer with ,,
+nmap <leader><leader> <c-^>
+
+" clear search highlighting
+nmap <ret> :nohlsearch<cr>
+
+" open files in the same directory as the current file
+cnoremap %% <c-r>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
+" a visual reminder of an 80-character line
+if exists('+colorcolumn')
+  set colorcolumn=140
 else
-    colorscheme elflord    " use this color scheme
-    set background=dark        " adapt colors for background
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
-if has("autocmd")
-    " Restore cursor position
-    au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+" don't autofold, but still allow manual folding
+set foldlevel=100
 
-    " Filetypes (au = autocmd)
-    au FileType helpfile set nonumber      " no line numbers when viewing help
-    au FileType helpfile nnoremap <buffer><cr> <c-]>   " Enter selects subject
-    au FileType helpfile nnoremap <buffer><bs> <c-T>   " Backspace to go back
-    
-    " When using mutt, text width=72
-    au FileType mail,tex set textwidth=72
-    au FileType cpp,c,java,sh,pl,php,asp  set autoindent
-    au FileType cpp,c,java,sh,pl,php,asp  set smartindent
-    au FileType cpp,c,java,sh,pl,php,asp  set cindent
-    "au BufRead mutt*[0-9] set tw=72
-    
-    " Automatically chmod +x Shell and Perl scripts
-    "au BufWritePost   *.sh             !chmod +x %
-    "au BufWritePost   *.pl             !chmod +x %
+set autoindent
+set smartindent
+set hidden
+set hlsearch
+set list
+set number
+set ruler
+set smarttab
+set showcmd
+set wildmenu
+set ignorecase
+set smartcase
+set scrolloff=5
+set backspace=indent,eol,start " backspace over everything
 
-    " File formats
-    au BufNewFile,BufRead  *.pls    set syntax=dosini
-    au BufNewFile,BufRead  modprobe.conf    set syntax=modconf
-endif
+" mimic TextMate's invisible characters
+set listchars=tab:▸\ ,eol:¬
 
-" Keyboard mappings
-map <F1> :previous<CR>  " map F1 to open previous buffer
-map <F2> :next<CR>      " map F2 to open next buffer
-map <silent> <C-N> :silent noh<CR> " turn off highlighted search
-map ,v :sp ~/.vimrc<cr> " edit my .vimrc file in a split
-map ,e :e ~/.vimrc<cr>      " edit my .vimrc file
-map ,u :source ~/.vimrc<cr> " update the system settings from my vimrc file
-"----- write out html file
-map ,h :source $VIM/vim71/syntax/2html.vim<cr>:w<cr>:clo<cr>
+" show current file (filetype) on the left and 
+" [cursor position line,colum] [number of lines] on the right
+set statusline=%F%m%r%h%w\ (%{&ft})\ %=[%l,%v]\ [%L\ lines]
 
+" show the status line
+set laststatus=2
 
-" Common command line typos
-"cmap W w
-"cmap Q q
+syntax enable
+syntax on
 
-" Keyboard mapping for numeric keypad
-"imap <Esc>OM <c-m>
-" map <Esc>OM <c-m>
-"imap <Esc>OP <nop>
-" map <Esc>OP <nop>
-"imap <Esc>OQ /
-" map <Esc>OQ /
-"imap <Esc>OR *
-" map <Esc>OR *
-"imap <Esc>OS -
-" map <Esc>OS -
-
-"imap <Esc>Ol +
-"imap <Esc>Om -
-"imap <Esc>On ,
-"imap <Esc>Op 0
-"imap <Esc>Oq 1
-"imap <Esc>Or 2
-"imap <Esc>Os 3
-"imap <Esc>Ot 4
-"imap <Esc>Ou 5
-"imap <Esc>Ov 6
-"imap <Esc>Ow 7
-"imap <Esc>Ox 8
-"imap <Esc>Oy 9
-"imap <Esc>Oz 0
+colorscheme elflord
