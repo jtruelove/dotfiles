@@ -8,10 +8,5 @@ if [ -f $HOME/.dotfiles/bash/external/rails_completion/rails.bash ]; then
   . $HOME/.dotfiles/bash/external/rails_completion/rails.bash
 fi
 
-# django bash completion
-if [ -f $HOME/src/django-trunk/extras/django_bash_completion ]; then
-  . "$HOME/src/django-trunk/extras/django_bash_completion"
-fi
-
 # source RVM, should always be last
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

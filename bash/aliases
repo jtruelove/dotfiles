@@ -13,10 +13,15 @@ alias tls="racket -f $HOME/Projects/scheme/TLS/base.scm -i"
 # handy for grepping words from the dictionary
 alias words="cat /usr/share/dict/web2 /usr/share/dict/web2a"
 
+
+
 # laziness
+alias ls='ls -aGF'                                                             
+alias ll='ls -lha'                                                             
+alias df='df -h'                                                            
+alias du='du -h'
 alias a="alias"
 alias l="l -F"
-alias ll="ls -lF"
 alias lls="ls -alF"
 alias lr="lls -R"
 alias lts="lls -t"
@@ -90,9 +95,6 @@ alias ea="v $HOME/.dotfiles/bash/aliases"
 alias ee="v $HOME/.dotfiles/bash/env"
 alias et="v $HOME/.dotfiles/bash/tools"
 alias reload=". $HOME/.bash_profile"
-
-alias yuicompress="java -jar $HOME/bin/yuicompressor-2.4.8pre.jar"
-alias dnstest="java -jar $HOME/bin/browsermob-dns-perf.jar"
 
 # always color rspec
 alias rspec="rspec -c"

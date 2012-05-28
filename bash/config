@@ -3,11 +3,9 @@
 HOST=`hostname -s`
 
 # Change prompt color based on hostname
-if [ $HOST = 'Ateles' ]; then
+if [ $HOST = 'paris' ]; then
   COLOR=$GREEN
-elif [ $HOST = 'Cacajao' ]; then
-  COLOR=$VIOLET
-elif [ $HOST = 'adamjspooner' ]; then
+elif [ $HOST = 'tokyo' ]; then
   COLOR=$RED
 else
   COLOR=$WHITE
@@ -17,4 +15,4 @@ fi
 GLUE="\[\033[G\]"
 
 # Set the prompt to: "[<user>@<host> <pwd> ] "
-export PS1="$GLUE$BRIGHT_BLACK[$COLOR\u$BRIGHT_BLACK@$COLOR\h $BLUE\w $BRIGHT_BLACK]$RESET "
+export PS1="$GLUE$BRIGHT_BLACK[$COLOR\u$BRIGHT_BLACK@$COLOR\h $BRIGHT_CYAN\w $BRIGHT_BLACK]$RESET "

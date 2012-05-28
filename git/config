@@ -36,14 +36,14 @@
 
 [core]
   editor = mate -w
-	excludesfile = /Users/adam/.gitignore_global
+	excludesfile = /Users/jtruelove/.gitignore_global
 
 [push]
   default = current
 
 [user]
-	name = Adam Spooner
-	email = adam@authenticjobs.com
+	name = Jeremy Truelove
+	email = jtruelove@gmail.com
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
