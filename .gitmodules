@@ -40,3 +40,6 @@
 [submodule "vim-tcomment"]
 	path = vim-tcomment
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "vim/bundle/vim-tcomment"]
+	path = vim/bundle/vim-tcomment
+	url = https://github.com/tomtom/tcomment_vim.git
