@@ -16,9 +16,9 @@ alias words="cat /usr/share/dict/web2 /usr/share/dict/web2a"
 
 
 # laziness
-alias ls='ls -aGF'                                                             
-alias ll='ls -lha'                                                             
-alias df='df -h'                                                            
+alias ls='ls -aGF'
+alias ll='ls -lha'
+alias df='df -h'
 alias du='du -h'
 alias a="alias"
 alias l="l -F"

@@ -94,3 +94,7 @@ syntax enable
 syntax on
 
 colorscheme elflord
+
+"tab stuff
+set switchbuf=usetab,newtab
+set guitablabel=\[%N\]\ %t\ %M
