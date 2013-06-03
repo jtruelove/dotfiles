@@ -105,3 +105,5 @@ mkcd() {
   cd "$*"
 }
 
+alias chrome="open -a \"Google Chrome\" --args --disable-web-security --allow-file-access-from-files --allow-file-access --enable-file-cookies --enable-logging --v=1&"
+alias tailChrome="tail -f ~/Library/Application\ Support/Google/Chrome/chrome_debug.log"

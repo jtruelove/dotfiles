@@ -8,17 +8,20 @@ export TERM="xterm-color"
 export PGDATA="/usr/local/var/postgres"
 export PYTHON="/usr/local/bin/python"
 export NODE_PATH="/usr/local/lib/node_modules"
+export COFFEE_HOME="/usr/local/share/npm/bin"
+export RUBY_HOME="$HOME/.rbenv/bin"
 
 # Default paths
 # Ensure brew is happy by adding /usr/local/(s)bin
 # before /usr/bin
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+export PATH="$RUBY_HOME:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+eval "$(rbenv init -)"
 
 # Additional brew paths
 export PATH="$PATH:/usr/local/Cellar/python/2.7.1/bin:/usr/local/share/python"
 
 # My path
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/bin:$COFFEE_HOME"
 
 export LSCOLORS=bxfxdxbxcxedabagacad
 
