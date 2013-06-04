@@ -3,16 +3,18 @@
 HOST=`hostname -s`
 
 # Change prompt color based on hostname
-if [ $HOST = 'paris' ]; then
+if [ $HOST = 'jdev' ]; then
   COLOR=$GREEN
-elif [ $HOST = 'tokyo' ]; then
-  COLOR=$RED
-else
-  COLOR=$WHITE
 fi
 
 # http://jonisalonen.com/2012/your-bash-prompt-needs-this/
 GLUE="\[\033[G\]"
 
+function checkGit {
+    echo '$(__git_ps1 "%s")'
+}
+
 # Set the prompt to: "[<user>@<host> <pwd> ] "
-export PS1="$GLUE$BRIGHT_BLACK[$COLOR\u$BRIGHT_BLACK@$COLOR\h $BRIGHT_CYAN\w $BRIGHT_BLACK]$RESET "
+export PS1="$GLUE$BRIGHT_BLACK[$COLOR\u$BRIGHT_BLACK@$COLOR\h $BRIGHT_CYAN\w $BRIGHT_BLUE$(checkGit)$BRIGHT_BLACK] $RESET"
+
+
