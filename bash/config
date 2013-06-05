@@ -15,6 +15,4 @@ function checkGit {
 }
 
 # Set the prompt to: "[<user>@<host> <pwd> ] "
-export PS1="$GLUE$BRIGHT_BLACK[$COLOR\u$BRIGHT_BLACK@$COLOR\h $BRIGHT_CYAN\w $BRIGHT_BLUE$(checkGit)$BRIGHT_BLACK] $RESET"
-
-
+export PS1="$GLUE$BRIGHT_BLACK[$COLOR\u$BRIGHT_BLACK@$BRIGHT_WHITE\h $BRIGHT_CYAN\w $BRIGHT_BLUE$(checkGit)$BRIGHT_BLACK] $RESET"

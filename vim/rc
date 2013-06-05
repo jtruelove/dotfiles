@@ -98,3 +98,19 @@ colorscheme elflord
 "tab stuff
 set switchbuf=usetab,newtab
 set guitablabel=\[%N\]\ %t\ %M
+
+" toggle line numbers
+nmap <C-L> :set invnumber<CR>
+
+"""""
+"Nerdtree stuff
+"""""
+"start nerd tree by default
+autocmd vimenter * NERDTree
+" on new buffer or vim enter put the cursor in the main window
+autocmd BufNew * wincmd w
+autocmd vimenter * wincmd w
+"exit vim if you close the last buffer 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"add nerd tree toggle
+map <C-n> :NERDTreeToggle<CR>
