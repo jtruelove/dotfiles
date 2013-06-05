@@ -27,3 +27,5 @@ export LSCOLORS=bxfxdxbxcxedabagacad
 
 #needed for mysql and rvm to be happy
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home"
