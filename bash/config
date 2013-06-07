@@ -3,7 +3,7 @@
 HOST=`hostname -s`
 
 # Change prompt color based on hostname
-if [ $HOST = 'jdev' ]; then
+if [ $HOST = 'paris' ]; then
   COLOR=$GREEN
 fi
 
