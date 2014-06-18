@@ -20,3 +20,7 @@ function modUp {
 todo() {
       git commit --allow-empty -m "TODO: $*"
 }
+
+get_git_remote_branch() {
+      git rev-parse --abbrev-ref --symbolic-full-name @{u}
+}

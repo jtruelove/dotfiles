@@ -105,6 +105,7 @@ nmap <C-L> :set invnumber<CR>
 """""
 "Nerdtree stuff
 """""
+
 "start nerd tree by default
 autocmd vimenter * NERDTree
 " on new buffer or vim enter put the cursor in the main window
@@ -114,3 +115,4 @@ autocmd vimenter * wincmd w
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "add nerd tree toggle
 map <C-n> :NERDTreeToggle<CR>
+"center focus on nerd tree startup
