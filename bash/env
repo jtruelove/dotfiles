@@ -8,7 +8,6 @@ export TERM="xterm-color"
 export PGDATA="/usr/local/var/postgres"
 export PYTHON="/usr/local/bin/python"
 export NODE_PATH="/usr/local/lib/node_modules"
-export COFFEE_HOME="/usr/local/share/npm/bin"
 export RUBY_HOME="$HOME/.rbenv/bin"
 
 # Default paths
@@ -20,12 +19,17 @@ eval "$(rbenv init -)"
 # Additional brew paths
 export PATH="$PATH:/usr/local/Cellar/python/2.7.1/bin:/usr/local/share/python"
 
+# java versions
+export JAVA6_HOME="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"
+export JAVA7_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home"
+export JAVA8_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home"
+export JAVA_HOME="$JAVA8_HOME"
+
 # My path
-export PATH="$PATH:$HOME/bin:$COFFEE_HOME"
+export PATH="$PATH:$HOME/bin"
 
 export LSCOLORS=bxfxdxbxcxedabagacad
 
 #needed for mysql and rvm to be happy
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home"
